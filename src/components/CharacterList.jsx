@@ -5,9 +5,9 @@ function NavPage(props) {
   return (
     <header className="d-flex justify-content-between align-items-center">
       <p>Page: {props.page}</p>
-      <div className="">
+      <div className="pagination">
         <button
-          className="btn btn-small btn-primary mr-2"
+          className="btn btn-small btn-primary mx-2 my-4 page-link"
           onClick={() => {
             props.setPage(props.page - 1);
           }}
@@ -15,7 +15,7 @@ function NavPage(props) {
           Prev page
         </button>
         <button
-          className="btn btn-small btn-primary"
+          className="btn btn-small btn-primary page-link mx-2 my-4"
           onClick={() => {
             props.setPage(props.page + 1);
           }}
@@ -59,7 +59,6 @@ function CharacterList() {
           })}
         </div>
       )}
-      <NavPage page={page} setPage={setPage} />
     </div>
   );
 }
